@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+/*
+PHP Multi dimensional array parsed as json
+ */
 Route::get('/posts', function() {
-    return response()->json([
+    return Response()->json([
         'posts' => [
             [
                 'title' => 'Post One'
@@ -23,6 +27,7 @@ Route::get('/posts', function() {
     ]);
 });
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:sanctum')->get('/user',
+ function (Request $request) {
+            return $request->user();
 });
