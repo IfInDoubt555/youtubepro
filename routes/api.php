@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,19 +14,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 /*
-PHP Multi dimensional array parsed as json
- */
+PHP Multi dimensional array parsed as json 
+
 Route::get('/posts', function() {
-    return Response()->json([
+    return response()->json([
         'posts' => [
             [
                 'title' => 'Post One'
             ]
         ]
     ]);
-});
+}); */
 
 Route::middleware('auth:sanctum')->get('/user',
  function (Request $request) {
             return $request->user();
 });
+
