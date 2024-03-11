@@ -15,7 +15,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('listings', [
+        'heading' => 'Latest Listings',
+        'listings' =>[
+            [
+                'id' => 1,
+                'title' => 'Listing One',
+                'description' => 'This job smells like your moms farts after she ate two bowls of chili and drank a glass of milk being mildly lactose intolerant. But we pay well. Enough that you will barely be scraping by but we give pizza every 6 months to show that we at least pretend to care. We are a family. Mostly disfunctional but a family none the less and we will rub you the wrong wat on purpose because we can. Apply within. Good day'
+            ],            
+            [
+                'id' => 2,
+                'title' => 'Listing Two',
+                'description' => 'This job smells like your moms farts after she ate two bowls of chili and drank a glass of milk being mildly lactose intolerant. But we pay well. Enough that you will barely be scraping by but we give pizza every 6 months to show that we at least pretend to care. We are a family. Mostly disfunctional but a family none the less and we will rub you the wrong wat on purpose because we can. Apply within. Good day'
+            ]
+            
+        
+            ]
+    ]);
 });
 
 /*
