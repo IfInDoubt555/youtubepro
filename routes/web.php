@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,4 +34,12 @@ Working with a wildcard {id} is the wildcard.
 */
 Route::get('/posts/{id}', function($id){
     return response('Post ' . $id);
-})->where('id', '[0-9]+-');
+})->where('id', '[0-9]+');
+
+/*
+Request is a html class that needed imported.
+You can return queries directly with the $request id
+*/ 
+Route::get('/search', function(Request $request)  {
+    return $request->name . ' ' . $request->city;
+});
