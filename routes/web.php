@@ -42,4 +42,4 @@ You can return queries directly with the $request id
 
 Route::get('/search', function(Request $request)  {
     return $request->name . ' ' . $request->city;
-});
+});*/
